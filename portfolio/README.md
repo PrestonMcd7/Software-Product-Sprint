@@ -1,6 +1,2 @@
-This directory is where you'll write all of your code!
-
-By default it contains a barebones web app. To run a local server, execute this
-command:
-
-mvn appengine:devserver
+This repo contains Preston McDonald's portfolio and SPS projects. 
+I am excited to learn css, html, and javascript!
