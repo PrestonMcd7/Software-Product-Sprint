@@ -29,3 +29,11 @@ function addRandomQuote() {
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = quote;
 }
+async function sayHelloUsingAsyncAwait() {
+   const hiContainer = document.getElementById('hi-container');
+   quoteContainer.innerText = Hi;
+
+  const response = await fetch('/data');
+  const quote = await response.text();
+  document.getElementById('hi-container').innerText = Hi;
+}
