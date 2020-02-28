@@ -15,14 +15,17 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomQuote() {
+  const quotes =
+        ["You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want. -Yoshihiro Togashi",
+        "I don’t want what another man can give me. If he grants me anything, then it’s his to give and not my own. -Kentaro Miura",
+        "Sometimes good people make bad choices. It doesn't mean they are bad people. It means they're human. -Sui Ishida",
+        "Why is it that when one man builds a wall, the next man immediately needs to know what's on the other side? -George R.R. Martin"];
 
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = quote;
 }
