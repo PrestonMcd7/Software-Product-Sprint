@@ -29,3 +29,45 @@ function addRandomQuote() {
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = quote;
 }
+async function sayHelloUsingAsyncAwait() {
+   const hiContainer = document.getElementById('hi-container');
+   quoteContainer.innerText = Hi;
+
+  const response = await fetch('/data');
+  const quote = await response.text();
+  document.getElementById('hi-container').innerText = Hi;
+}
+
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 27.9659, lng: 82.8001}, zoom: 10});
+  
+  const irbMarker = new google.maps.Marker({
+    position: {lat: 27.869962, lng: -82.850475},
+    map: map,
+    title: 'Indian Rocks Beach'});
+
+  const irbInfoWindow =
+      new google.maps.InfoWindow({content: 'The best beach in Pinellas county. The sand and water is just as goo as Clearwater beach, quieter.'});
+  trexInfoWindow.open(map, irbMarker);
+
+  const shMarker = new google.maps.Marker({
+    position: {lat: 27.990709, lng: -82.690237},
+    map: map,
+    title: 'Main Street Safety-Harbor'});
+
+  const shInfoWindow =
+      new google.maps.InfoWindow({content: 'Favorite place to walk around, home to a few of my favorite restaurants.'});
+  trexInfoWindow.open(map, shMarker);
+
+  const cmMarker = new google.maps.Marker({
+    position: {lat: 28.017391, lng: -82.733499},
+    map: map,
+    title: 'Countryside Mall'});
+
+  const cmInfoWindow =
+      new google.maps.InfoWindow({content: 'I have been going here for as long as I can remember, ice skating, movies, chick-fil-A. It has everything.'});
+  trexInfoWindow.open(map, cmMarker);
+  
+}

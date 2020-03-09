@@ -5,8 +5,9 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlMFaAnc1zErkr5y2QZOd7SLUs42rsmRU"></script>
   </head>
-  <body>
+  <body onload="createMap();">
     <div id="content">
       <h1>Preston McDonald's Portfolio</h1>
       <p>This is my portfolio.</p>
@@ -22,6 +23,9 @@
       <p>Click here to get a random message:</p>
       <button onclick="addRandomQuote()">Hello</button>
       <div id="quote-container"></div>
+      
+      <!-- <body onload="sayHelloUsingAsyncAwait()"> -->
+      
       <img src="/images/chileHorses.JPG" alt="Preston and Brandon with horses" width="300" height="300">
       <img src="/images/mcFriends.JPG" alt="Preston and friends" width="300" height="300">
       <p>
@@ -34,6 +38,11 @@
       </ul>
       <img src="/images/qnMe.JPG" alt="Preston and Q" width="300" height="300">
       <img src="/images/ldoc.JPG" alt="preston and friends on the last day of classes" width="300" height="300">
+      
+      <h3>Favorite Places!</h3>
+      <div id="map"></div>
+      <p>This map shows a few of my favorite places!</p>
+      
       <p>
           If you want to learn more about me, click on the links below!
       </p>
